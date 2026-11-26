@@ -8,10 +8,12 @@ namespace Lab5
     {
         public static int ReadInt32(string prompt, int minValue, int maxValue)
         {
+            bool isNumber;
+            int value;
             while (true)
             {
                 Console.Write(prompt);
-                var isNumber = int.TryParse(ReadLine(), CultureInfo.InvariantCulture, out var value);
+                isNumber = int.TryParse(ReadLine(), CultureInfo.InvariantCulture, out value);
                 if (isNumber && value >= minValue && value <= maxValue)
                 {
                     return value;
@@ -23,10 +25,11 @@ namespace Lab5
 
         public static string ReadText(string prompt)
         {
+            string text;
             while (true)
             {
                 Console.Write(prompt);
-                var text = ReadLine().Trim();
+                text = ReadLine().Trim();
                 if (text.Length > 0)
                 {
                     return text;

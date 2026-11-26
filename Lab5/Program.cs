@@ -41,10 +41,11 @@ namespace Lab5
         {
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
+            int choice;
             while (true)
             {
                 Console.WriteLine(Menu);
-                var choice = ConsoleInput.ReadInt32("Пункт: ", 0, 6);
+                choice = ConsoleInput.ReadInt32("Пункт: ", 0, 6);
                 if (choice == 0)
                 {
                     return;
